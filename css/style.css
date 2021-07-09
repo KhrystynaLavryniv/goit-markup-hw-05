@@ -101,24 +101,19 @@ ul {
 .header-list .mail-link,
 .header-list .tel-link {
   display: flex;
-  padding-top: 32px;
-  padding-bottom: 32px;
-}
-
-.list-item:not(:last-child) {
-  margin-right: 50px;
-}
-
-.navigation-link,
-.mail-link,
-.tel-link {
   font-weight: 500;
   font-size: 14px;
   line-height: 1.17;
   color: var(--main-color);
   letter-spacing: 0.02em;
   text-decoration: none;
+  padding-top: 32px;
+  padding-bottom: 32px;
   transition: color var(--main-duration) var(--main-timing-function);
+}
+
+.list-item:not(:last-child) {
+  margin-right: 50px;
 }
 
 .header-list .mail-link,
@@ -130,7 +125,7 @@ ul {
 .contact-icon {
   margin-right: 10px;
   fill: var(--text-color);
-  transition: fill;
+  transition: fill var(--main-duration) var(--main-timing-function);
 }
 
 .mail-link:focus .contact-icon,
@@ -531,7 +526,8 @@ address {
   color: var(--portfolio-main-color);
   background-color: var(--button-color);
   transition: background-color var(--main-duration) var(--main-timing-function),
-    box-shadow var(--main-duration) var(--main-timing-function);
+    box-shadow var(--main-duration) var(--main-timing-function),
+    color var(--main-duration) var(--main-timing-function);
 }
 
 .button-list-item:not(:last-child) {
@@ -589,7 +585,7 @@ address {
   position: absolute;
   top: 100%;
   left: 0;
-  height: 294px;
+  height: 100%;
   width: 100%;
   background-color: rgba(33, 150, 243, 0.9);
   color: #ffffff;
